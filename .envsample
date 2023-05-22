@@ -1,6 +1,6 @@
 # universal config. THIS IS IMPORTANT
-# 'DEVELOPMENT', 'TESTING', 'PRODUCTION'
-ENV_SELECTION = 'DEVELOPMENT'
+# 'development', 'testing', 'production'
+ENV_SELECTION = 'development'
 
 # for dev
 DEV_APP_PORT = 3000
