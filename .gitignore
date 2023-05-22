@@ -1,0 +1,14 @@
+# ignore ALL .log files
+*.log
+
+# ignore ALL files in ANY directory named temp
+temp/
+
+# ignore .env files
+.env
+
+# ignore package-lock
+package-lock.json
+
+# ignore node_modules
+node_modules

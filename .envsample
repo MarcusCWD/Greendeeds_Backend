@@ -1,0 +1,28 @@
+# for dev
+DEV_APP_PORT = 3000
+
+DEV_DB_CLIENT = 'mysql2'
+DEV_DB_NAME = 'testknex'
+DEV_DB_USER = 'root'
+DEV_DB_PASSWORD = 'password'
+DEV_DB_HOST = 'localhost'
+
+
+# for test
+TES_APP_PORT = 3000
+
+TES_DB_CLIENT = 'mysql2'
+TES_DB_NAME = 'testknex'
+TES_DB_USER = 'root'
+TES_DB_PASSWORD = 'password'
+TES_DB_HOST = 'localhost'
+
+
+# for production
+PRD_APP_PORT = 3000
+
+PRD_DB_CLIENT = 'mysql2'
+PRD_DB_NAME = 'testknex'
+PRD_DB_USER = 'root'
+PRD_DB_PASSWORD = 'password'
+PRD_DB_HOST = 'localhost'
