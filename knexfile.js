@@ -11,12 +11,12 @@ module.exports = {
     },
   },
   testing: {
-    client: process.env.TEST_DB_CLIENT,
+    client: process.env.TES_DB_CLIENT,
     connection: {
-      database: process.env.TEST_DB_NAME,
-      user: process.env.TEST_DB_USER,
-      password: process.env.TEST_DB_PASSWORD,
-      host: process.env.TEST_DB_HOST,
+      database: process.env.TES_DB_NAME,
+      user: process.env.TES_DB_USER,
+      password: process.env.TES_DB_PASSWORD,
+      host: process.env.TES_DB_HOST,
     },
   },
 };

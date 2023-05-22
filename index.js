@@ -10,12 +10,12 @@ app.use(cors());
 app.options('**', cors());
 
 const api = {
-    product: require('./routes/product'),
-    category: require('./routes/category'),
+    terrarium: require('./routes/terrarium'),
+    // plant: require('./routes/plant'),
 }
 
-app.use("/api/product", api.product)
-app.use("/api/category", api.category)
+app.use("/api/terrarium", api.terrarium)
+// app.use("/api/plant", api.plant)
 
 app.listen(process.env.DEV_APP_PORT, () => {
     console.log(`Server has started on port ${process.env.DEV_APP_PORT}`);
