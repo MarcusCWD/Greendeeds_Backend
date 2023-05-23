@@ -223,7 +223,7 @@ CREATE TABLE `products` (
   KEY `products_size_id_foreign` (`size_id`),
   CONSTRAINT `products_size_id_foreign` FOREIGN KEY (`size_id`) REFERENCES `sizes` (`id`),
   CONSTRAINT `products_terrarium_id_foreign` FOREIGN KEY (`terrarium_id`) REFERENCES `terrariums` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,6 +232,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,12.55,1,1,1),(2,15.55,1,1,2),(3,18.55,1,1,3),(4,11.55,1,2,1),(5,14.55,1,2,2),(6,17.55,1,2,3);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -270,7 +271,7 @@ CREATE TABLE `sizes` (
   `name` varchar(50) NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -279,6 +280,7 @@ CREATE TABLE `sizes` (
 
 LOCK TABLES `sizes` WRITE;
 /*!40000 ALTER TABLE `sizes` DISABLE KEYS */;
+INSERT INTO `sizes` VALUES (1,'Small',1),(2,'Medium',1),(3,'Large',1);
 /*!40000 ALTER TABLE `sizes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,7 +296,7 @@ CREATE TABLE `terrariums` (
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -303,6 +305,7 @@ CREATE TABLE `terrariums` (
 
 LOCK TABLES `terrariums` WRITE;
 /*!40000 ALTER TABLE `terrariums` DISABLE KEYS */;
+INSERT INTO `terrariums` VALUES (1,'Forest Terrarium I','Fittonia plant with an figurine in your enchanted forest'),(2,'Sweet Terrarium I','Fittonia plant with an figurine in your sweet forest');
 /*!40000 ALTER TABLE `terrariums` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -349,4 +352,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-22 21:21:04
+-- Dump completed on 2023-05-23 18:12:10
