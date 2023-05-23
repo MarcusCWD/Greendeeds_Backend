@@ -23,9 +23,14 @@ router.get("/byId", async (req, res) => {
     }
 })
 
-// router.get("/basePrice", async (req, res) => {
-
-// })
+router.get("/basePrice", async (req, res) => {
+  try {
+    const terrariums = await Terrarium.getAllTerrariumsWithBasePrice();
+    res.json(terrariums);
+  } catch (error) {
+    res.status(500).json(error.toString());
+  }
+})
 
 
 module.exports = router
