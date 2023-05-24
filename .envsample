@@ -1,6 +1,8 @@
 # universal config. THIS IS IMPORTANT
 # 'development', 'testing', 'production'
 ENV_SELECTION = 'development'
+DEFAULT_PAGINATION_PAGE = 1
+DEFAULT_PAGINATION_LIMIT = 10
 
 # for dev
 DEV_APP_PORT = 3000
