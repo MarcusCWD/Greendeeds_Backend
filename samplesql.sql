@@ -296,7 +296,7 @@ CREATE TABLE `terrariums` (
   `name` varchar(50) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -305,7 +305,7 @@ CREATE TABLE `terrariums` (
 
 LOCK TABLES `terrariums` WRITE;
 /*!40000 ALTER TABLE `terrariums` DISABLE KEYS */;
-INSERT INTO `terrariums` VALUES (1,'Forest Terrarium I','Fittonia plant with an figurine in your enchanted forest'),(2,'Sweet Terrarium I','Fittonia plant with an figurine in your sweet forest');
+INSERT INTO `terrariums` VALUES (1,'Forest Terrarium I','Fittonia plant with an figurine in your enchanted forest'),(2,'Sweet Terrarium I','Fittonia plant with an figurine in your sweet forest'),(3,'Chaos Terrarium I','Fittonia plant with chaotic plants'),(4,'Fairy Terrarium I','Fittonia plant with fairy plants'),(5,'Star Terrarium I','Fittonia plant with star plants'),(6,'Ocean Terrarium I','Fittonia plant with ocean plants'),(7,'Cute Terrarium I','Fittonia plant with cute plants'),(8,'Spiky Terrarium I','Fittonia plant with spiky plants'),(9,'Red Terrarium I','Fittonia plant with red plants'),(10,'Green Terrarium I','Fittonia plant with green plants'),(11,'Blue Terrarium I','Fittonia plant with blueplants'),(12,'Yellow Terrarium I','Fittonia plant with yellow plants'),(13,'Apple Terrarium I','Fittonia plant with apple plants'),(14,'Pear Terrarium I','Fittonia plant with pear plants'),(15,'Orange Terrarium I','Fittonia plant with orange plants');
 /*!40000 ALTER TABLE `terrariums` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -352,4 +352,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-23 18:12:10
+-- Dump completed on 2023-05-25  9:47:00
