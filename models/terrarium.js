@@ -23,7 +23,6 @@ module.exports = {
 
   // add in the query logic for get all with base price
   async getAllTerrariumsWithBasePrice(limit, offset) {
-
     return knex('terrariums')
       .select('terrariums.id', 'terrariums.name', 'terrariums.description', knex.raw('MIN(products.price) AS lowest_price'))
       .join('products', 'terrariums.id', 'products.terrarium_id')
@@ -33,6 +32,7 @@ module.exports = {
       .offset(offset)
       .limit(limit);
   },
+
   async createTerrarium(terrarium) {
     return knex('terrariums').insert(terrarium).returning('*');
   },

@@ -26,7 +26,7 @@ router.get("/byId", async (req, res) => {
   }
 })
 
-router.get("/basePrice", async (req, res) => {
+router.get("/BasePrice", async (req, res) => {
   try {
     let pageDetails = await pagination(req.query.page, req.query.limit)
     const paginatedQuery = await Terrarium.getAllTerrariumsWithBasePrice(pageDetails[0], pageDetails[1])
