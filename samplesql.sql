@@ -193,7 +193,7 @@ CREATE TABLE `plants` (
   `price` decimal(4,2) NOT NULL,
   `active` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -202,6 +202,7 @@ CREATE TABLE `plants` (
 
 LOCK TABLES `plants` WRITE;
 /*!40000 ALTER TABLE `plants` DISABLE KEYS */;
+INSERT INTO `plants` VALUES (1,'Fittonia (pink)','Most common plant for your terrarium with pink veins',4.50,0),(2,'Fittonia (green)','Most common plant for your terrarium with green veins',3.50,1),(3,'Fittonia (white)','Most common plant for your terrarium with white veins',3.80,1);
 /*!40000 ALTER TABLE `plants` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -352,4 +353,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-05-25  9:47:00
+-- Dump completed on 2023-05-25 11:50:12

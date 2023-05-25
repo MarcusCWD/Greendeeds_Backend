@@ -11,11 +11,13 @@ app.options('**', cors());
 
 const api = {
     terrarium: require('./routes/terrarium'),
-    // plant: require('./routes/plant'),
+    product: require('./routes/product'),
+    plant: require('./routes/plant'),
 }
 
 app.use("/api/terrarium", api.terrarium)
-// app.use("/api/plant", api.plant)
+app.use("/api/product", api.product)
+app.use("/api/plant", api.plant)
 
 app.listen(process.env.DEV_APP_PORT, () => {
     console.log(`Server has started on port ${process.env.DEV_APP_PORT}`);

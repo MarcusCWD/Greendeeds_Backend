@@ -26,6 +26,17 @@ router.get("/byId", async (req, res) => {
   }
 })
 
+// possible that return multiple objects. But no need for pagination (expected only at most < 5 obj)
+router.get("/byIdWithProduct", async (req, res) => {
+  try {
+    const terrariumId = req.query.id
+    const terrarium = await Terrarium.getTerrariumByIdWithProduct(terrariumId);
+    res.json(terrarium);
+  } catch (error) {
+    res.status(500).json(error.toString());
+  }
+})
+
 router.get("/BasePrice", async (req, res) => {
   try {
     let pageDetails = await pagination(req.query.page, req.query.limit)

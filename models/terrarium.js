@@ -21,12 +21,19 @@ module.exports = {
     })
   },
 
+  async getTerrariumByIdWithProduct(id) {
+    return knex('terrariums')
+    .select('*')
+    .join('products', 'terrariums.id', 'products.terrarium_id')
+    .where(knex.raw(`terrariums.id = ${id}`))
+    .orderBy('products.id')
+  },
+
   // add in the query logic for get all with base price
   async getAllTerrariumsWithBasePrice(limit, offset) {
     return knex('terrariums')
       .select('terrariums.id', 'terrariums.name', 'terrariums.description', knex.raw('MIN(products.price) AS lowest_price'))
       .join('products', 'terrariums.id', 'products.terrarium_id')
-      .where('products.active', 1)
       .groupBy('terrariums.id')
       .orderBy('terrariums.id')
       .offset(offset)

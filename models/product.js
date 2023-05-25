@@ -21,17 +21,6 @@ module.exports = {
     })
   },
 
-  // add in the query logic for get all with base price
-  async getAllProductsWithTerrarium(limit, offset) {
-    return knex('products')
-      .select('products.id', 'products.price')
-      .join('terrariums', 'products.terrarium_id', 'terrariums.id')
-      .where('products.active', 1)
-      .orderBy('products.id')
-      .offset(offset)
-      .limit(limit);
-  },
-
   async createProduct(product) {
     return knex('products').insert(product).returning('*');
   },
